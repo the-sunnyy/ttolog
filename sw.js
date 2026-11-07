@@ -1,6 +1,6 @@
 /* 뚝딱로그 service worker: opens offline after the first visit, and adds the isolation headers
    GitHub Pages cannot send (so in-browser speech recognition can use every core). */
-const CACHE = 'ttk-core-mw6r4k3r', RUNTIME = 'ttk-rt-v1';
+const CACHE = 'ttk-core-mw6uj9hf', RUNTIME = 'ttk-rt-v1';
 const CORE = ['./', './index.html', './manifest.json', './icon-180.png', './icon-192.png', './icon-512.png', './sfx/beep.mp3', './sfx/boing_r.mp3', './sfx/bubble_r.mp3', './sfx/clap.mp3', './sfx/correct.mp3', './sfx/ding_r.mp3', './sfx/dingdong.mp3', './sfx/drumroll.mp3', './sfx/dudungtak.mp3', './sfx/heartbeat.mp3', './sfx/kaching.mp3', './sfx/laugh.mp3', './sfx/pop_r.mp3', './sfx/scratch.mp3', './sfx/shutter_r.mp3', './sfx/sparkle_r.mp3', './sfx/whoosh_r.mp3', './sfx/wrong.mp3'];
 self.addEventListener('install', e => e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting())));
 self.addEventListener('activate', e => e.waitUntil((async () => {
